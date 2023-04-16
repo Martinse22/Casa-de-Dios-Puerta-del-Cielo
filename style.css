@@ -1,0 +1,245 @@
+header{
+    background: url(imagenes/cielo2.jpg);   
+    width: 100%;
+    display: inline-block;
+    font-size: 40px;
+}
+#imagenes{
+    display: block;
+    margin: 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+nav{
+    position: absolute;
+    top: 50px;
+    right: 110px;
+}
+nav li{
+    display: inline;
+    margin: 0 0 0 100px;
+}
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+.principal{
+    background: linear-gradient(#fefefe, #06a9f5,#888888);
+    padding: 100px;
+}
+.principalP{
+    text-align: center;
+    font-size: 24px;
+  }
+.tituloCentralizado1{
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic; 
+}
+.tituloCentralizado{
+    text-align: center;
+}
+.mision{
+    background: linear-gradient(#fefefe, #888888);
+    padding: 3em 0;
+}
+.parrafo-mision{
+    width: 60%;
+    display:inline-block;
+    text-align: center;
+}
+.img-buscareis{
+    width: 30%;
+    margin: 0 100px 0 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #000000;
+}
+.cultos{
+    padding: 3em 0;
+    background: #f5f5f1;
+}
+.contenidos-culto{
+    width: 820px;
+    margin: 0 auto;
+}
+.listas-culto{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+.items:first-child{
+    font-weight: bold;
+    font-size: 24px;
+}
+.items{
+    font-size: 22px;
+    margin-top: 6px;
+}
+.icon-ubicacion{
+    width: 10%;
+    display: inline;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px #202020;
+}
+.icon-ubicacion1{
+    width: 10%;
+    display: inline;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px #202020;
+}
+.ubicacion{
+    font-size: 22px;
+    text-align: center;
+}
+.parrafo-mision{
+    text-align: center;
+    font-size: 24px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 5px;
+}  
+.socialicons{
+    position: fixed;
+    right: 0;
+    top: 10%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100%;
+}
+.icon{
+    color: white;
+    text-decoration: none;
+    padding: 1.5rem;
+    display: flex;
+    transition: all .5s;
+    margin: 40px 0px;
+}
+.icon-facebook{
+    background: #3b5998;
+    border-radius: 1rem 0 0 1rem;
+}
+.icon-youtube2{
+    background: #e83028;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.icon-location2{
+    background: #44c956;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.icon:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);    
+}
+.imagen2{
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    width: 10%;
+}  
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+    margin: 20px;
+}
+/* Estilos para pantallas medianas */
+@media (max-width: 768px) {
+    header {
+        font-size: 30px;
+    }
+
+    .nav-lista {
+        display: none;
+    }
+
+    .principal {
+        padding: 50px;
+    }
+
+    .parrafo-mision {
+        width: 100%;
+        display: block;
+    }
+
+    .img-buscareis {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .contenidos-culto {
+        width: 100%;
+    }
+
+    .listas-culto {
+        width: 100%;
+        display: block;
+    }
+
+    .items:first-child {
+        font-size: 20px;
+    }
+
+    .items {
+        font-size: 18px;
+        margin-top: 4px;
+    }
+
+    .icon-ubicacion, .icon-ubicacion1 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .ubicacion {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .socialicons {
+        display: none;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+    header {
+        font-size: 24px;
+    }
+
+    .principal {
+        padding: 30px;
+    }
+
+    .mision {
+        padding: 2em 0;
+    }
+
+    .footer {
+        padding: 2px;
+    }
+}

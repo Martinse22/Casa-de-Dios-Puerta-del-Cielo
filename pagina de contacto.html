@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html leng="es">
+     
+     <head>
+          <meta charset="UTF-8">
+          <title>Contacto-Iglesia Casa de Dios, Puerta del Cielo</title>
+          <link rel="stylesheet" href="./reset.css">
+          <link rel="stylesheet" href="./style-contacto.css">
+     </head>
+     
+     <body>
+          <header>
+                 <div class="caja">
+                     <h1><img class="imageniglesia" src="./imagenes/CDPC.jpg" alt="Logo de la iglesia"></h1> 
+                     <nav>
+                         <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./pagina de contacto.html">Contacto</a></li>
+                         </ul>
+                     </nav>               
+                 </div>   
+          </header>
+          
+          <main> 
+                    
+                <form id="formulario-contacto">
+
+                         <label for="nombreyapellido">Nombre y Apellido</label>
+                         <input type="text" name="nombreyapellido" id="nombreyapellido" class="input-padron" required>
+             
+                         <label for="correoelectronico">Correo Electronico</label>
+                         <input type="email" name="correoelectronico" id="correoelectronico" class="input-padron" required
+                             placeholder="email@gmail.com">
+             
+                         <label for="telefono">Telefono</label>
+                         <input type="tel" name="telefono" id="telefono" class="input-padron" required
+                             placeholder="[xx]xxx xxxx">
+             
+                         <label for="mensaje">Mensaje</label>
+                         <textarea name="mensaje" id="mensaje" cols="70" rows="10" class="input-padron" required></textarea>
+
+                    <fieldset>
+                        <legend>Le gustaria ser contactado?</legend>
+
+                        <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                        
+                        <label for="radio-telefono"><input type="radio" name="contacto" value="email" id="radio-telefono">Telefono</label>
+                            
+                        <label for="radio-whatsapp"><input type="radio" name="contacto" value="email" id="radio-whatsapp" checked>Whatsapp</label>   
+    
+                    </fieldset>
+
+                    <input class="input" type="submit" value="Enviar Formulario">
+                
+                </form>
+          </main>
+          
+          <footer>
+            <img class="imageniglesia" src="./imagenes/CDPC.jpg">
+            <p class="copyright">&copy Copyright Iglesia Casa de Dios, Puerta del Cielo</p>
+       </footer>
+
+       <script>
+          // Obtener el formulario y agregarle un evento de submit
+          document.getElementById("formulario-contacto").addEventListener("submit", function (event) {
+              event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+  
+              // Obtener los valores de los campos del formulario
+              var nombreApellido = document.getElementById("nombreyapellido").value;
+              var correoElectronico = document.getElementById("correoelectronico").value;
+              var telefono = document.getElementById("telefono").value;
+              var mensaje = document.getElementById("mensaje").value;
+              var contacto = document.querySelector("input[name='contacto']:checked").value;
+  
+              // Crear el cuerpo del correo con la información del formulario
+              var cuerpoCorreo = "Nombre y Apellido: " + nombreApellido + "\n" +
+                                  "Correo Electrónico: " + correoElectronico + "\n" +
+                                  "Teléfono: " + telefono + "\n" +
+                                  "Mensaje: " + mensaje + "\n" +
+                                  "Contacto preferido: " + contacto;
+  
+              // Enviar el correo electrónico
+              window.location.href = "mailto:carloslau88@gmail.com?subject=Formulario de Contacto&body=" + encodeURIComponent(cuerpoCorreo);
+          });
+       </script>
+  </body> 
+
+</html>
